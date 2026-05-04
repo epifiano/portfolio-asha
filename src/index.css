@@ -1,0 +1,13 @@
+@import 'tailwindcss';
+@import '@fontsource-variable/geist-mono';
+
+@theme {
+  --color-background: hsl(17, 53%, 93%);
+  --color-font: #1e1e1d;
+  --font-geist-mono: 'Geist Mono Variable', monospace;
+  --font-space-grotesk: 'Space Grotesk Variable', sans-serif;
+}
+
+body {
+  font-family: 'Geist Mono Variable', monospace;
+}
