@@ -6,7 +6,7 @@ export const Work = () => {
   )
 
   return (
-    <section className="pt-8">
+    <section className="pt-12 md:pt-16">
       <h2 className="font-serif text-4xl italic">Work</h2>
       <hr className="my-4" />
       <div className="border-font/20 relative ml-3 border-l-[1.5px] pt-1 pb-4">

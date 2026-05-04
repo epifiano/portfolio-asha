@@ -3,7 +3,7 @@
 ### task
 
 - [x] new ui
-- [ ] add responsive mobile
+- [x] add responsive mobile
 - [ ] renderer `markdown` in pages
 - [x] update projects
 - [ ] create new blog
