@@ -1,7 +1,7 @@
 export const Hero = () => {
   return (
     <section className="flex h-screen items-center justify-between gap-8">
-      <div className="flex w-2/3 flex-col border-r">
+      <div className="flex w-2/3 flex-col border-r pr-8">
         <span className="text-6xl">Desarrollador</span>
         <span className="font-serif text-6xl italic">Diseñador</span>
         <span className="font-serif text-6xl italic">Web</span>
