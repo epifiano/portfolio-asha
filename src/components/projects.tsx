@@ -6,7 +6,7 @@ export const Projects = () => {
     <section>
       <h2 className="font-serif text-4xl italic">Proyectos</h2>
       <hr className="my-4" />
-      <p>Conoce algunos de mis proyectos.</p>
+      <p>Conoce algunos de mis proyectos de desarrollo.</p>
       <div className="grid grid-cols-1 gap-4 pt-4">
         {ProjectsData.map((project) => (
           <div key={project.title}>

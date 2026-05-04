@@ -9,7 +9,7 @@ export default function App() {
   return (
     <Layout>
       <Header />
-      <main className="mx-auto max-w-4xl">
+      <main className="mx-auto max-w-5xl">
         <Hero />
         <Projects />
         <Work />
