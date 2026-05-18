@@ -4,12 +4,12 @@
 
 - [x] new ui
 - [x] add responsive mobile
-- [ ] renderer `markdown` in pages
+- [x] renderer `markdown` in pages
 - [x] update projects
-- [ ] create new blog
+- [x] create new blog
 - [x] add new section `work`
-- [ ] create pages to projects
-- [ ] create pages to blog
-- [ ] create section contact
-- [ ] migrate to `astrojs`
+- [x] create pages to projects
+- [x] create pages to blog
+- [x] create section contact
+- [x] migrate to `astrojs`
 - [ ] deploy
