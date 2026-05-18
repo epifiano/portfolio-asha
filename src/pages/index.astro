@@ -4,10 +4,12 @@ import { Header } from '../components/header';
 import { Hero } from '../components/hero';
 import { Projects } from '../components/projects';
 import { Work } from '../components/work';
+import { Blogs } from '../components/blogs';
 import { Footer } from '../components/footer';
 import { getCollection } from 'astro:content';
 
 const allProjects = await getCollection('projects');
+const allBlogs = await getCollection('blogs');
 ---
 
 <!doctype html>
@@ -28,8 +30,9 @@ const allProjects = await getCollection('projects');
     <Header />
     <main className="mx-auto max-w-5xl">
       <Hero />
-      <Projects projects={allProjects} />
       <Work />
+      <Projects projects={allProjects} />
+      <Blogs blogs={allBlogs} />
     </main>
     <Footer />
   </body>
