@@ -1,18 +1,3 @@
-export const ProjectsData = [
-  {
-    title: 'TecniDrive',
-    description: 'Plataforma para la gestion de maquinas de confección.',
-  },
-  {
-    title: 'Odontometrics',
-    description: 'Plataforma para la gestion de consultorios odontologicos.',
-  },
-  {
-    title: 'Monolitho',
-    description: 'Plataforma para la gestión personal diaria.',
-  },
-]
-
 export const WorkData = [
   {
     title: 'TecniDrive',

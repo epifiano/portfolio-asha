@@ -1,0 +1,36 @@
+---
+import '../index.css';
+import { Header } from '../components/header';
+import { Hero } from '../components/hero';
+import { Projects } from '../components/projects';
+import { Work } from '../components/work';
+import { Footer } from '../components/footer';
+import { getCollection } from 'astro:content';
+
+const allProjects = await getCollection('projects');
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>portfolio-asha</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="p-4 md:p-8 lg:p-12 bg-background text-font">
+    <Header />
+    <main className="mx-auto max-w-5xl">
+      <Hero />
+      <Projects projects={allProjects} />
+      <Work />
+    </main>
+    <Footer />
+  </body>
+</html>
