@@ -5,7 +5,7 @@ interface Blog {
   data: {
     title: string;
     description: string;
-    date?: string;
+    date?: Date;
   };
 }
 
@@ -22,7 +22,9 @@ export const Blogs = ({ blogs }: { blogs: Blog[] }) => {
               <h3 className="font-serif text-2xl italic group-hover:underline">
                 {blog.data.title} <ArrowRight className="inline" />
               </h3>
-              {blog.data.date && <p className="text-sm opacity-70 mb-1">{blog.data.date}</p>}
+              {blog.data.date && <p className="text-sm opacity-70 mb-1">
+                {blog.data.date.toLocaleDateString('es-ES', { year: 'numeric', month: 'long', day: 'numeric' })}
+              </p>}
               <p className="">{blog.data.description}</p>
             </a>
           </div>

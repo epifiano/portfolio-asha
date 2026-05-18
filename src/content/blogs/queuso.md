@@ -1,6 +1,7 @@
 ---
 title: '¿Que uso?'
 description: 'Neovim + Monolitho + Macbook M1'
+date: 2022-10-14
 ---
 
 # ¿Que uso?
