@@ -3,8 +3,10 @@
 @import '@fontsource-variable/geist-mono';
 
 @theme {
-  --color-background: hsl(17, 53%, 93%);
-  --color-font: #1e1e1d;
+  --color-background: #141414;
+  --color-font: #F4E0C9;
+  --color-accent: #5c5c5c;
+  --color-border: #DECAA6;
   --font-geist-mono: 'Geist Mono Variable', monospace;
   --font-space-grotesk: 'Space Grotesk Variable', sans-serif;
 }
