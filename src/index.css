@@ -24,29 +24,11 @@ body {
   --tw-prose-headings: var(--color-font);
 }
 
-@keyframes typing {
-  from { max-width: 0 }
-  to { max-width: 50rem }
-}
-
 @keyframes cursor-blink {
   0%, 100% { opacity: 1 }
   50% { opacity: 0 }
 }
 
-.typing {
-  overflow: hidden;
-  white-space: nowrap;
-  display: inline-block;
-  max-width: 0;
-  animation-name: typing;
-  animation-duration: var(--typing-duration, 1.5s);
-  animation-timing-function: steps(var(--typing-steps, 20));
-  animation-delay: var(--typing-delay, 0ms);
-  animation-fill-mode: forwards;
-}
-
-.typing::after {
-  content: '|';
+.typing-cursor {
   animation: cursor-blink 0.8s step-end infinite;
 }

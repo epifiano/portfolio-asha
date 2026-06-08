@@ -2,12 +2,14 @@
 ---
 <section class="flex h-auto md:h-screen flex-col md:flex-row items-start md:items-center justify-between gap-8 py-16 md:py-0">
   <div class="flex w-full md:w-2/3 flex-col border-b md:border-b-0 md:border-r border-font/20 pb-8 md:pb-0 pr-0 md:pr-8">
-    <h1 class="sr-only">Javier Rojas — Desarrollador Web Full Stack, Editor & Community Manager</h1>
-    <span class="text-4xl md:text-6xl typing" style="--typing-duration:0.9s; --typing-steps:13" aria-hidden="true">Desarrollador</span>
-    <span class="text-4xl md:text-6xl typing" style="--typing-duration:0.3s; --typing-steps:4; --typing-delay:1s" aria-hidden="true">Web,</span>
-    <span class="font-serif text-4xl md:text-6xl italic typing" style="--typing-duration:0.5s; --typing-steps:7; --typing-delay:1.35s" aria-hidden="true">Editor,</span>
-    <span class="font-serif text-4xl md:text-6xl italic typing" style="--typing-duration:1.2s; --typing-steps:17; --typing-delay:1.9s" aria-hidden="true">Community Manager</span>
-    <p class="mt-4 animate-fade-in-up animate-delay-3300">
+    <h1 class="sr-only">Javier Rojas — Desarrollador Web Full Stack, Editor & Comunitty Manager</h1>
+    <div id="hero-typing" class="text-4xl md:text-6xl">
+      <span id="hero-line1"></span>
+      <br id="hero-br1" class="hidden">
+      <span id="hero-text" class="font-serif italic"></span>
+      <span id="hero-cursor" class="typing-cursor">|</span>
+    </div>
+    <p id="hero-paragraph" class="mt-4 opacity-0">
       <span class="pr-2 font-serif italic">Hola!</span>
       Mi nombre es{' '}
       <span class="pr-2 font-serif italic">Javier Rojas.</span>
@@ -16,7 +18,7 @@
       estructural y rendimiento técnico impecable.
     </p>
   </div>
-  <div id="contacto" class="flex w-full md:w-auto flex-col gap-3 animate-fade-in-up animate-delay-3500">
+  <div id="hero-contact" class="flex w-full md:w-auto flex-col gap-3 opacity-0">
     <p>Contactame para trabajar juntos.</p>
     <a
       href="https://wa.me/+573143925300"
@@ -26,3 +28,48 @@
     </a>
   </div>
 </section>
+
+<script>
+  const cursor = document.getElementById('hero-cursor');
+  const line1 = document.getElementById('hero-line1');
+  const br1 = document.getElementById('hero-br1');
+  const heroText = document.getElementById('hero-text');
+  const paragraph = document.getElementById('hero-paragraph');
+  const contact = document.getElementById('hero-contact');
+
+  const TYPE_SPEED = 65;
+  const line1Text = 'Desarrollador Web,';
+  const restText = 'Editor &\nComunitty Manager';
+
+  let i = 0;
+
+  function typeLine1() {
+    if (i < line1Text.length) {
+      line1.textContent += line1Text[i];
+      i++;
+      setTimeout(typeLine1, TYPE_SPEED);
+    } else {
+      i = 0;
+      br1.classList.remove('hidden');
+      setTimeout(typeRest, TYPE_SPEED * 4);
+    }
+  }
+
+  function typeRest() {
+    if (i < restText.length) {
+      const c = restText[i];
+      if (c === '\n') {
+        heroText.innerHTML += '<br>';
+      } else {
+        heroText.innerHTML += c;
+      }
+      i++;
+      setTimeout(typeRest, TYPE_SPEED);
+    } else {
+      paragraph.classList.add('animate-fade-in-up');
+      contact.classList.add('animate-fade-in-up');
+    }
+  }
+
+  typeLine1();
+</script>
