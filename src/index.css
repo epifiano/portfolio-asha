@@ -19,3 +19,7 @@ html {
 body {
   font-family: 'Geist Mono Variable', monospace;
 }
+
+.prose.prose-invert {
+  --tw-prose-headings: var(--color-font);
+}
