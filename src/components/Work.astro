@@ -7,18 +7,20 @@ const sorted = [...WorkData].sort(
 ---
 
 <section class="pt-12 md:pt-16">
-  <h2 class="font-serif text-4xl italic">Work</h2>
+  <h2 class="font-serif text-4xl italic">Experiencia</h2>
   <hr class="my-4" />
   <div class="border-font/20 relative ml-3 border-l-[1.5px] pt-1 pb-4">
-    {sorted.map((work) => (
-      <div class="relative mb-8 pl-6 last:mb-0">
-        <span class="border-font/40 bg-background absolute top-[0.4rem] left-0 h-2.5 w-2.5 -translate-x-1/2 rounded-full border-[1.5px]" />
-        <h3 class="font-serif text-2xl italic">{work.title}</h3>
-        <p class="mt-1 text-sm opacity-70">{work.range}</p>
-        <p class="text-sm opacity-50">
-          {work.initial} — {work.final}
-        </p>
-      </div>
-    ))}
+    {
+      sorted.map((work) => (
+        <div class="relative mb-8 pl-6 last:mb-0">
+          <span class="border-font/40 bg-background absolute top-[0.4rem] left-0 h-2.5 w-2.5 -translate-x-1/2 rounded-full border-[1.5px]" />
+          <h3 class="font-serif text-2xl italic">{work.title}</h3>
+          <p class="mt-1 text-sm opacity-70">{work.range}</p>
+          <p class="text-sm opacity-50">
+            {work.initial} — {work.final}
+          </p>
+        </div>
+      ))
+    }
   </div>
 </section>
