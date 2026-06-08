@@ -11,6 +11,10 @@
   --font-space-grotesk: 'Space Grotesk Variable', sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Geist Mono Variable', monospace;
 }

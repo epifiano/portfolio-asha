@@ -29,9 +29,9 @@ const allBlogs = await getCollection('blogs');
   <body class="p-4 md:p-8 lg:p-12 bg-background text-font">
     <Header />
     <main class="mx-auto max-w-5xl">
-      <Hero />
+      <section id="sobre-mi"><Hero /></section>
       <Work />
-      <Projects projects={allProjects} />
+      <section id="proyectos"><Projects projects={allProjects} /></section>
       <Blogs blogs={allBlogs} />
     </main>
     <Footer />
